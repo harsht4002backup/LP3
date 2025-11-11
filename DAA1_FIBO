@@ -1,0 +1,16 @@
+def fib_iterative(n):
+    a, b = 0, 1
+    for i in range(n):
+        a, b = b, a + b
+    return a
+
+def fibonacci_recursive(n):
+    if n <= 1:
+        return n
+    else:
+        return fibonacci_recursive(n - 1) + fibonacci_recursive(n - 2)
+
+n = int(input("Enter value of n(nth Fibonacci number): "))
+n = n-1
+print("Fibonacci Number(Iterative):", fib_iterative(n))
+print("Fibonacci Number(Iterative):", fibonacci_recursive(n))
